@@ -184,7 +184,7 @@ html::-webkit-scrollbar-track /* je sais pas à quoi ça sert*/ {
     z-index: 900;
 }
 .slide-box-content span {
-    font-size: clamp (18, 5vw, 30px);
+    font-size: clamp (18, 5vw, 30px); /* le responsive*/
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -193,13 +193,75 @@ html::-webkit-scrollbar-track /* je sais pas à quoi ça sert*/ {
 }
 
 .slide-box-content .play {
+    color: var(--text); /* probleme de couleur*/
     position: absolute;
     bottom : 10%;
     right : 4rem;
-    color: var(--text);    
+      
+}
+.slide-box-content .play:hover {
+    position: absolute;
+    bottom : 10%;
+    right : 4rem;
+    color: var(--accent);    
+
 }
 
 
   /* ################################## */
- /* ########## A venir ####### */
+ /* ########## film ####### */
+ /* ################################## */
+ .movies-container {
+  max-width: 968px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto)); /* 1le responsive*/
+    margin-top: 2rem;
+    grid-gap: 1rem;
+ }
+ .card-movies-img {
+    width: 100%;
+    height: 270px;
+   
+ }
+
+ .card-movies-img img {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+ }
+
+ .card-movies-img img:hover {
+    transform: translateY(-15px);
+ }
+
+ .card-movies span{
+    font-size:1rem;
+ }
+ .container-coming {
+ display: grid;
+ grid-gap: 1rem;
+ margin-top: 2rem;
+ max-width: 960px;
+ margin: 0auto;
+ }
+ .container-coming .card-movies{
+width: 100px;
+ }
+
+ .container-coming .card-movies-img img:hover {
+    transform: translateY(-10px); 
+ } 
+ 
+
+  /* ################################## */
+ /* ########## film ####### */
+ /* ################################## */
+
+
+  /* ################################## */
+ /* ########## film ####### */
  /* ################################## */
