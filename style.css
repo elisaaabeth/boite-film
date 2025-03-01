@@ -1,0 +1,205 @@
+ /* ################################## */
+ /* ############V CSS GLOBAL ####### */
+ /* ################################## */
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; /*police*/
+    text-decoration: none;
+    list-style: none ; /* pas de liste */
+    scroll-behavior: smooth; /* le scroll plus interessant */
+
+    background-color: rouge;
+}
+
+:root /*variable*/ {
+    --accent: red; /*boutton*/
+    --accent2: rgb(79, 17, 17); /*boutton*/
+    --text: #fff;  
+    --bg: black; /* background*/
+    
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text); /* les liens ne sont pas considérés comme des textes*/
+
+}
+
+/* la barre de scroll*/ 
+html::-webkit-scrollbar {
+    width: 12px; 
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background: var(--accent);
+}
+/* je remarque que si je mets la taille et la couleur  ensemble la couleur ecrase la taille*/
+
+html::-webkit-scrollbar-track /* je sais pas à quoi ça sert*/ {
+    background-color: rgb(17, 17, 18);
+}
+
+/* bouton*/
+.btn {
+    
+    background: var(--accent);
+    color: var(--text);
+    padding: 0.5rm 1rm;
+    border-radius: 7px;
+    color: var(--text);
+   transition: background .2s ease-in-out, /* lorsqu'on clique*/
+}
+
+
+.btn:hover {
+    background: var(--accent2);
+}
+
+
+ /* ################################## */
+ /* ########## CSS NAVIGATION ####### */
+ /* ################################## */
+
+ nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px 100px;
+
+    z-index: 1000; /* contexte de positionnement */
+    text-align: center; /*centrer en */
+    justify-content: space-between; /* espce egale entre les éléments*/
+    display: flex;
+    transition: background .5s ease-in-out; /* pour le bg et le box shadow*/
+ }
+
+ nav.active {
+   
+     box-shadow: 0 5px 5px 0 rgba(255, 255, 255, 0.2); /* 1ere val x, 2eme val y, 3eme dose,4eme étendue */
+ }
+
+ /* les icons */
+
+ .bx {
+ color: var(--accent);
+ font-size: 1.7rem;
+ }
+
+ .logo.bx {
+    color: var(--accent); 
+ }
+ .navigation {
+    display: flex;
+    column-gap: 5rem; /* definitt l'écart entre les column*/
+    
+ }
+
+ .navigation a {
+    font-size: 1rem;
+    color: var(--text);
+ }
+ 
+ .navigation li {
+    position: relative;    
+ }
+
+ .navigation a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    bottom : -4px;
+    left: 0;
+    background: var(--accent);
+    position: absolute;
+    transition:.4s ease-in-out;
+ }
+
+ .navigation a:hover, a.link-active /* pou le survol du lien et du lien activé */
+ {
+    color: var(--accent) ;
+ }
+
+ .navigation a:hover::after, a.link-active::after {
+ width: 100%;
+ }
+
+ #menuBurger{
+    z-index: 1000;
+    cursor: pointer; /* l'utilisateur va appuyer*/
+    display: none;
+ }
+
+  /* ################################## */
+ /* ########## CSS Home ####### */
+ /* ################################## */
+
+.slide-box {
+    width: 100%;
+    min-height: 640px;
+    position: relative;   
+    display: flex;
+    align-items: center;
+}
+
+.slide-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* recouvrir le contenue*/
+    position: absolute;      
+    z-index: -1;
+    object-position: center;
+   
+}
+
+.slide-box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100;
+    z-index: 0;
+    background: rgb(18, 17, 17);
+}
+
+/* pagination */
+.swiper-pagination-bullet {
+    width: 6px!important;
+    height: 6px!important;
+    border-radius: 2rem!important;
+    opacity: 1!important;
+    transition: .2s ease-in-out!important;
+
+}
+
+.swiper-pagination-bullet-active {
+  width: 1,5rem!important ;
+}
+.slide-box-content {
+    padding: 0 150px;
+    z-index: 900;
+}
+.slide-box-content span {
+    font-size: clamp (18, 5vw, 30px);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.slide-box-content h1{
+    font-size: clamp (18, 5vw, 30px);
+}
+
+.slide-box-content .play {
+    position: absolute;
+    bottom : 10%;
+    right : 4rem;
+    color: var(--text);    
+}
+
+
+  /* ################################## */
+ /* ########## A venir ####### */
+ /* ################################## */
