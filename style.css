@@ -258,10 +258,142 @@ width: 100px;
  
 
   /* ################################## */
- /* ########## film ####### */
+ /* ########## Newsletters ####### */
  /* ################################## */
 
+ .NewsLetters {
+    max-width: 968px;
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* interessant comme ftn*/
+    row-gap: 2rem; /* pour de l'espace entre les choses*/ 
+ }
+
+ .NewsLetters h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+ }
+
+ .NewsLetters h2 span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--accent);
+ }
+
+ .NewsLetters form{
+    padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  background: var(--text);
+ }
+
+ .NewsLetters form .email {
+    width: 260px;
+ }
+
+ .NewsLetters form input[type = "submit"] {
+    cursor: pointer;
+ }
+ 
 
   /* ################################## */
- /* ########## film ####### */
+ /* ########## footer ####### */
  /* ################################## */
+
+ footer {
+    max-width: 1300px;
+    padding:1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    display: fLex;
+    border-top: 2px solid var(--accent);
+    
+ }
+ footer .social {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+ }
+
+ footer .social .bx {
+    column-gap: 0,5rem;
+    background: var(--accent);
+    color: var(--text);
+    transition: 1s ease-in-out;
+    border-radius: 50%;
+ }
+ footer .social .bx:hover {
+    background: var(--accent2);
+}
+.copy {
+text-align: center;
+font-size: 600;
+padding: 1rem;
+
+}
+
+  /* ################################## */
+ /* ########## breakpoints ####### */
+ /* ################################## */
+
+ /* je maitrise pas cette partie */
+
+ 
+ @media screen and (max-width: 1080px) {
+    .slide-box-content{
+        padding: 0 100px;
+    }
+ }
+
+ @media screen and (max-width: 991px) {
+    header{
+        padding: 18px 4%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+ }
+
+ @media screen and (max-width: 880px) {
+    .slide-box-content{
+        padding: 0 50px;
+    }
+    .NewsLetters form .email{
+        width: 100%;
+    }
+}
+   /* ################################## */
+ /* ########## displays block ####### */
+ /* ################################## */
+
+ #menuBurger {
+    display: block;
+    margin-left: 1rem;
+ }
+
+ .navigation{
+    position: absolute; /* positionnement par rapport au parent*/
+    top: 100px;
+    right: -100%;
+    flex-direction: column; /* l'alignement*/
+    padding: 1rem;
+    background: var(--bg);
+    min-height: 100vh; /* recherche sur vh*/
+    width: 200px;
+    row-gap: 1rem; /* l'espacement entre les éléments*/
+    transition: 2s ease-in-out;
+ }
+
+ .navigation.active {
+    margin: 2rem 0;
+ } 
+
+ .navigation.active {
+    right: 0;
+ }

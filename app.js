@@ -1,3 +1,13 @@
+const burger = document.querySelector("#menu-burger");
+const nav = document.querySelector(".navigation");
+const header = document.querySelector("nav");
+const linkNav = document.querySelectorAll(".navigation a");
+const section = document.querySelectorAll("section");
+
+burger.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
 /* ################################## */
 /* ########## slider Home ####### */
 /* ################################## */
